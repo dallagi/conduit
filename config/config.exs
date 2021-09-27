@@ -8,7 +8,8 @@
 import Config
 
 config :conduit,
-  ecto_repos: [Conduit.Repo]
+  ecto_repos: [Conduit.Repo],
+  event_stores: [Conduit.EventStore]
 
 # Configures the endpoint
 config :conduit, ConduitWeb.Endpoint,
@@ -26,6 +27,9 @@ config :conduit, ConduitWeb.Endpoint,
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
 config :conduit, Conduit.Mailer, adapter: Swoosh.Adapters.Local
+
+config :commanded,
+  event_store_adapter: Commanded.EventStore.Adapters.EventStore
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false

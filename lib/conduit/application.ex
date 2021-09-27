@@ -6,7 +6,7 @@ defmodule Conduit.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Conduit.Repo,
+      Conduit.Repo,
       ConduitWeb.Telemetry,
       ConduitWeb.Endpoint
     ]
