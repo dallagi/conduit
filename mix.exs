@@ -35,6 +35,7 @@ defmodule Conduit.MixProject do
     [
       {:commanded, "~> 1.3"},
       {:commanded_eventstore_adapter, "~> 1.2"},
+      {:ex_machina, "~> 2.7"},
       {:phoenix, "~> 1.6.0-rc.0", override: true},
       {:phoenix_ecto, "~> 4.4"},
       {:ecto_sql, "~> 3.6"},

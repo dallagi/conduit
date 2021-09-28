@@ -19,6 +19,15 @@ config :conduit, ConduitWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   server: false
 
+# Configure the event store database
+config :conduit, Conduit.EventStore,
+  serializer: Commanded.Serialization.JsonSerializer,
+  username: "postgres",
+  password: "postgres",
+  database: "conduit_eventstore_test#{System.get_env("MIX_TEST_PARTITION")}",
+  hostname: "localhost",
+  pool_size: 10
+
 # In test we don't send emails.
 config :conduit, Conduit.Mailer, adapter: Swoosh.Adapters.Test
 
