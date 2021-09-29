@@ -35,19 +35,20 @@ defmodule Conduit.MixProject do
     [
       {:commanded, "~> 1.3"},
       {:commanded_eventstore_adapter, "~> 1.2"},
+      {:ecto_sql, "~> 3.6"},
+      {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
       {:ex_machina, "~> 2.7"},
+      {:exconstructor, "~> 1.2"},
+      {:gettext, "~> 0.18"},
+      {:jason, "~> 1.2"},
       {:phoenix, "~> 1.6.0-rc.0", override: true},
       {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "~> 3.6"},
-      {:postgrex, ">= 0.0.0"},
       {:phoenix_live_dashboard, "~> 0.5"},
-      {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
+      {:plug_cowboy, "~> 2.5"},
+      {:postgrex, ">= 0.0.0"},
       {:swoosh, "~> 1.3"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
-      {:gettext, "~> 0.18"},
-      {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"},
       {:uuid, "~> 1.1"}
     ]
   end
