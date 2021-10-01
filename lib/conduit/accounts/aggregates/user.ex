@@ -1,4 +1,3 @@
-# lib/conduit/accounts/aggregates/user.ex
 defmodule Conduit.Accounts.Aggregates.User do
   defstruct [
     :uuid,
@@ -8,6 +7,8 @@ defmodule Conduit.Accounts.Aggregates.User do
   ]
 
   alias Conduit.Accounts.Aggregates.User
+  alias Conduit.Accounts.Commands.RegisterUser
+  alias Conduit.Accounts.Events.UserRegistered
 
   @doc """
   Register a new user
